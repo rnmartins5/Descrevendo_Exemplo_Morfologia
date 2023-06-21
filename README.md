@@ -18,8 +18,9 @@ kernel = np.ones((5,5),np.uint8)
 #Retorna na tela a variavel Kernel
 print(kernel)
      
-
+#Aplicando a erosão na imagem 'img' com elemento estruturante 'kernel' e fazendo a repetição da erosão 2 vezes com o 'iterations=2'
 erosion = cv2.erode(img,kernel,iterations = 2)
+#Fazendo o oposto da erosão, está dilatando a imagem, repetindo duas vezes
 dilation = cv2.dilate(img,kernel,iterations = 2)
      
 
