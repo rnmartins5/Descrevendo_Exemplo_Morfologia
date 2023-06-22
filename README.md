@@ -49,3 +49,5 @@ cv2_imshow(opening)
 cv2_imshow(closing)
 cv2_imshow(gradient)
      
+#Descrição do codigo
+Nesse codigo está sendo feito a manipulação de imagens usando a tecnica de morfologia.
