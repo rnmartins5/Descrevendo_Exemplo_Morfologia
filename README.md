@@ -23,12 +23,15 @@ erosion = cv2.erode(img,kernel,iterations = 2)
 #Fazendo o oposto da erosão, está dilatando a imagem, repetindo duas vezes
 dilation = cv2.dilate(img,kernel,iterations = 2)
      
-
+#Da o contorno dos objeto na imagem
 gradient = cv2.morphologyEx(img, cv2.MORPH_GRADIENT, kernel)
+#Uma erosão seguida da dilatação, remover pequenas bolhas da imagem, ruidos
 opening = cv2.morphologyEx(img_opening, cv2.MORPH_OPEN, kernel)
+#Uma dilatação seguida de uma erosão, fechando buracos dentro do objeto, ou conectar componentes
 closing = cv2.morphologyEx(img_closing, cv2.MORPH_CLOSE, kernel)
      
 
+#Os dois exemplos é para exibir os dados da imagem
 '''
 #Caso usa com Python no próprio computador
 cv2.imshow('in', img)
