@@ -25,9 +25,9 @@ dilation = cv2.dilate(img,kernel,iterations = 2)
      
 #Da o contorno dos objeto na imagem
 gradient = cv2.morphologyEx(img, cv2.MORPH_GRADIENT, kernel)
-#Uma erosão seguida da dilatação, remover pequenas bolhas da imagem, ruidos
+#Aplicando erosão seguida da dilatação, remover pequenas bolhas da imagem, ruidos
 opening = cv2.morphologyEx(img_opening, cv2.MORPH_OPEN, kernel)
-#Uma dilatação seguida de uma erosão, fechando buracos dentro do objeto, ou conectar componentes
+#Aplicando dilatação seguida de uma erosão, fechando buracos dentro do objeto, ou conectar componentes
 closing = cv2.morphologyEx(img_closing, cv2.MORPH_CLOSE, kernel)
      
 
@@ -50,4 +50,11 @@ cv2_imshow(closing)
 cv2_imshow(gradient)
      
 #Descrição do codigo
-Nesse codigo está sendo feito a manipulação de imagens usando a tecnica de morfologia.
+Nesse código está sendo feito a manipulação de imagens usando a técnica de morfologia. Se utilizando das bibliotecas cv2 e numpy para fazer a manipulação de imagens com operações matemáticas.
+Primeiramente é carregada as imagens e colocadas em  ‘variáveis’ diferentes, para carregar essas imagens temos que  buscá-las nos arquivos e em seguida colocar o nome da imagem com o seu formato.
+Depois é criada outras variáveis que então é colocada nelas as dimensões da imagem, fazendo isso, depois criamos outra variável e atribuímos a ela uma matriz, utilizando a biblioteca numpy, neste código a matriz que foi utilizada foi uma matriz 5x5 de 1.
+
+Agora podemos aplicar a erosão na imagem. Aplicamos a erosão na imagem para erodir os limites do objeto em primeiro plano. A erosão encolhe ou afina os objetos em uma imagem e também permite separar objetos nas imagens.
+E a dilatação aumenta ou engrossa os objetos em uma imagem e também conecta objetos com proximidade menor que menor que o elemento estruturante. Faz a combinação da dilatação que expande, enquanto a erosão diminui os objetos da imagem. Essas funções geralmente são usadas em conjunto que daí gera a abertura e o fechamento.
+A abertura é a erosão do objeto seguido da dilatação e o fechamento é a  dilatação do objeto seguido da erosão. Daí também pode se aplicar uma função que dá o contorno dos objetos que é a .morphologyEx() .
+E finalizamos imprimindo as variáveis na tela com a função imshow().
