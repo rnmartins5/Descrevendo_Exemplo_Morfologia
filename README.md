@@ -1,5 +1,4 @@
 # Descrevendo_Morfologia
-#from https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_morphological_ops/py_morphological_ops.html
 #Importando a biblioteca cv2
 import cv2
 #Importando a biblioteca numpy e dando o nome dela como np
