@@ -1,4 +1,4 @@
-# Descrevendo_Morfologiaaaa
+# Morfologia
 #Importando a biblioteca cv2
 import cv2
 #Importando a biblioteca numpy e dando o nome dela como np
